@@ -1,0 +1,11 @@
+---
+- name: register variable
+  hosts: all
+  remote_user: docker
+  taks:
+    - shell:
+        cmd: ls -l 
+        chdir: /home/root/
+        register: my-output
+    - debug: 
+        msg: "output is {{ my-output }}
