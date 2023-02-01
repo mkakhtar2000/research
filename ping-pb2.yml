@@ -1,0 +1,6 @@
+---
+- name: pinging the systems
+  hosts: all
+  remote_user: docker
+  tasks:
+    - ping
