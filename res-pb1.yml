@@ -1,0 +1,9 @@
+---
+- name: a ping test to the hosts
+  hosts: all
+  remote_user: docker
+  tasks:
+    - name: Induce an exception to see what happens
+      ansible.builtin.ping:
+        data: crash
+
